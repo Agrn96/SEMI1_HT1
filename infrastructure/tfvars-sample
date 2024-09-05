@@ -1,0 +1,15 @@
+AWS_ACCESS_KEY = "AQUI PEGAN SU CLAVE DE ACCESO DE AWS"
+AWS_SECRET_KEY = "AQUI PEGAN SU CLAVE SECRETA DE AWS"
+AWS_REGION = "us-east-2"
+user_ssh = "ubuntu"
+PATH_KEYPAIR = "semi1_key"
+PATH_PUBLIC_KEYPAIR = "semi1_key.pub"
+DATABASE_PASSWORD   = "semi"
+DATABASE_USER       = "semi"
+DATABASE_NAME       = "semi_db"
+
+aws-credentials = terraform-user & terraformSemi1! 
+
+
+##COMANDO PARA GENERAR EL PAR DE CLAVES
+ssh-keygen -f semi1_key
