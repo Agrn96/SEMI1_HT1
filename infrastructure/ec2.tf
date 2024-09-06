@@ -1,4 +1,4 @@
-resource "aws_key_pair" "Semi1-key2" {
+resource "aws_key_pair" "Semi1-key" {
   key_name   = "Semi1-ht1" 
   public_key = file("${var.PATH_PUBLIC_KEYPAIR}")
 }
@@ -37,9 +37,9 @@ resource "aws_security_group" "Semi1-instances-sg1" {
 }
 
 resource "aws_instance" "ec2_node_ht1" {
-  ami             = "ami-0fa00f9c3aad25769"
+  ami             = "ami-09a1c459d70c72b96"
   instance_type   = "t2.micro"
-  key_name        = aws_key_pair.Semi1-key2.key_name
+  key_name        = aws_key_pair.Semi1-key.key_name
   security_groups = [aws_security_group.Semi1-instances-sg1.name]  # Use the security group by name
 
   tags = {
@@ -48,9 +48,9 @@ resource "aws_instance" "ec2_node_ht1" {
 }
 
 resource "aws_instance" "ec2_python_ht1" {
-  ami             = "ami-0fa00f9c3aad25769"
+  ami             = "ami-09a1c459d70c72b96"
   instance_type   = "t2.micro"
-  key_name        = aws_key_pair.Semi1-key2.key_name
+  key_name        = aws_key_pair.Semi1-key.key_name
   security_groups = [aws_security_group.Semi1-instances-sg1.name]  # Use the security group by name
 
   tags = {

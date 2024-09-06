@@ -14,7 +14,7 @@ sudo apt install python3-pip -y
 sudo apt install mysql-server -y
 
 # Conectarse a RDS y correr el DDL
-mysql -h mysql.cmuruwaihhhp.us-east-2.rds.amazonaws.com -P 3306 -u semi -D semi_db -p < DDL.sql 
+mysql -h mysql.cmuruwaihhhp.us-east-1.rds.amazonaws.com -P 3306 -u semi -D semi_db -p < DDL.sql 
 
 #sudo apt-get install git
 #git --version
